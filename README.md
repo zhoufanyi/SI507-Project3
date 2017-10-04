@@ -24,16 +24,16 @@
 
 * There are no *tests* for this, but the way the page is, you should see the following when this part of your program runs:
 
-Waving Kitty 1
-No alternative text provided!
-Waving Kitty 3
-Waving Kitty 4
-Waving Kitty 5
-Waving Kitty 6
-No alternative text provided!
-Waving Kitty 8
-Waving Kitty 9
-Waving Kitty 10
+	Waving Kitty 1
+	No alternative text provided!
+	Waving Kitty 3
+	Waving Kitty 4	
+	Waving Kitty 5
+	Waving Kitty 6
+	No alternative text provided!
+	Waving Kitty 8
+	Waving Kitty 9
+	Waving Kitty 10
 
 
 ### Part 1 [100 points]
