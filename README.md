@@ -41,7 +41,7 @@
 	Waving Kitty 8
 
 	Waving Kitty 9
-	
+
 	Waving Kitty 10
 
 
@@ -49,13 +49,13 @@
 
 * Access and cache data, starting from `https://www.nps.gov/index.htm`. You will ultimately need the HTML data from all the parks from Arkansas, California, and Michigan. So, you should save on your computer data from the following pages, in files with the following names:
 
-	* [Main page data](https://www.nps.gov/index.htm), in a file `nps_gov_data.html`
+	* [Main page data](https://www.nps.gov/index.htm), `https://www.nps.gov/index.htm`, in a file `nps_gov_data.html`
 
-	* [Arkansas](https://www.nps.gov/state/ar/index.htm), in a file `arkansas_data.html`
+	* [Arkansas](https://www.nps.gov/state/ar/index.htm), `https://www.nps.gov/state/ar/index.htm`, in a file `arkansas_data.html`
 
-	* [California](https://www.nps.gov/state/ca/index.htm), in a file `california_data.html`
+	* [California](https://www.nps.gov/state/ca/index.htm), `https://www.nps.gov/state/ca/index.htm`, in a file `california_data.html`
 
-	* [Michigan](https://www.nps.gov/state/mi/index.htm), , in a file `michigan_data.html`
+	* [Michigan](https://www.nps.gov/state/mi/index.htm), `https://www.nps.gov/state/mi/index.htm`, in a file `michigan_data.html`
 
 
 * You should commit and push each of these `.html` files to your final Git repository.
