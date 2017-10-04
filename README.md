@@ -33,7 +33,7 @@ Waving Kitty 6
 No alternative text provided!
 Waving Kitty 8
 Waving Kitty 9
-Waving Kitty 10```
+Waving Kitty 10
 
 
 ### Part 1 [100 points]
