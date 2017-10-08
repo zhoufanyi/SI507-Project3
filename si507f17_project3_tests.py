@@ -11,10 +11,10 @@ from si507f17_project3_code import *
 
 class Part1(unittest.TestCase):
     def setUp(self):
-        self.mainpage = open("nps_gov_data.html")
-        self.akfile = open("arkansas_data.html")
-        self.cafile = open("california_data.html")
-        self.mifile = open("michigan_data.html")
+        self.mainpage = open("nps_gov_data.html",encoding = 'utf-8')
+        self.akfile = open("arkansas_data.html",encoding = 'utf-8')
+        self.cafile = open("california_data.html",encoding = 'utf-8')
+        self.mifile = open("michigan_data.html",encoding = 'utf-8')
 
     def test_files_exist(self):
         self.assertTrue(self.mainpage.read())
@@ -71,9 +71,9 @@ class Part3(unittest.TestCase):
 class Part4(unittest.TestCase):
     
     def setUp(self):
-        self.ak = open("arkansas.csv",'r')
-        self.mi = open("michigan.csv",'r')
-        self.ca = open("california.csv",'r')
+        self.ak = open("arkansas.csv",'r',encoding ='utf-8')
+        self.mi = open("michigan.csv",'r',encoding ='utf-8')
+        self.ca = open("california.csv",'r',encoding ='utf-8')
 
     def test_csv_files_exist(self):
         self.assertTrue(self.ak.read())
