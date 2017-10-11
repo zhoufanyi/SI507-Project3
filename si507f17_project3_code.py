@@ -26,15 +26,15 @@ def get_html(title,html = None):
         f.close()
     return page 
 
-# ursulav1_data = get_html('http://newmantaylor.com/gallery.html','ursulav1_data')
+ursulav1_data = get_html('http://newmantaylor.com/gallery.html','ursulav1_data')
 
-# soup1 = BeautifulSoup(ursulav1_data, 'html.parser')
-# some_img_elements = soup1.find_all('img')
-# for tag in some_img_elements:
-# 	if 'alt' in tag.attrs:
-# 		print(tag['alt'])
-# 	else:
-# 		print('No alternative text provided!')
+soup1 = BeautifulSoup(ursulav1_data, 'html.parser')
+some_img_elements = soup1.find_all('img')
+for tag in some_img_elements:
+	if 'alt' in tag.attrs:
+		print(tag['alt'])
+	else:
+		print('No alternative text provided!')
 
 ######### PART 1 #########
 
@@ -180,19 +180,6 @@ class NationalSite:
     def __contains__(self,input):
     	return input in self.name
         
-
-# f = open("sample_html_of_park.html", 'r', encoding='utf-8')
-# soup_inst = NationalSite(BeautifulSoup(f.read(), 'html.parser'))
-# print(soup_inst.name)
-# print(soup_inst.type)
-# print(soup_inst.location)
-# print(type(soup_inst.description.encode))
-#print('Isle' in soup_inst)
-#print(str(soup_inst))
-#print(soup_inst.get_mailing_address())
-# f.close()
-
-
 
 ## Recommendation: to test the class, at various points, uncomment the following code and invoke some of the methods / check out the instance variables of the test instance saved in the variable sample_inst:
 
