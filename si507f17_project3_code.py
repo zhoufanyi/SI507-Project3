@@ -26,7 +26,7 @@ def get_html(title,html = None):
         f.close()
     return page 
 
-ursulav1_data = get_html('http://newmantaylor.com/gallery.html','ursulav1_data')
+ursulav1_data = get_html('ursulav1_data','http://newmantaylor.com/gallery.html')
 
 soup1 = BeautifulSoup(ursulav1_data, 'html.parser')
 some_img_elements = soup1.find_all('img')
@@ -152,7 +152,7 @@ class NationalSite:
         return description
 
     def get_mailing_address(self):
-        web_address = self.site.find_all('a')[1]['href']
+        web_address = self.site.find_all('a')[2]['href']
         tiltle = self.name.replace(' ', '_').lower() + '_basic_information'
         information_soup = BeautifulSoup(
             get_html(tiltle, web_address), 'html.parser')

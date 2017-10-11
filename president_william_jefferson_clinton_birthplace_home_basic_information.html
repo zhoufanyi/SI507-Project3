@@ -1,13 +1,14 @@
 <!doctype html> <html lang="en" class="no-js"> <!-- Content Copyright National Park Service -->
-<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Alerts &amp; Conditions - President William Jefferson Clinton Birthplace Home National Historic Site (U.S. National Park Service)</title> <script>
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - President William Jefferson Clinton Birthplace Home National Historic Site (U.S. National Park Service)</title> <script>
 var jsDlgLoader = '/wicl/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/ADF/thirdParty/jquery/jquery-1.12.js"></script><script type="text/javascript" src="/commonspot/javascript/browser-all.js"></script>
+<script type="text/javascript" src="/ADF/thirdParty/jquery/jquery-1.12.js"></script><link rel="stylesheet" type="text/css" href="/commonspot/javascript/lightbox/lightbox.css"><link rel="stylesheet" type="text/css" href="/commonspot/dashboard/css/buttons.css"><script type="text/javascript" src="/commonspot/javascript/browser-all.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
+<link rel="stylesheet" type="text/css" href="/ADF/extensions/lightbox/1.0/css/lightbox_overrides.css">
 <!-- end (2) SecondaryResources -->
 <!-- beg (3) StyleTags -->
 <link rel="stylesheet" href="/common/commonspot/templates/assets/css/commonspotRTE.css" type="text/css" />
@@ -19,8 +20,8 @@ var gMenuControlID = 0;
 var menus_included = 0;
 var jsSiteID = 1;
 var jsSubSiteID = 22577;
-var js_gvPageID = 5104551;
-var jsPageID = 5104551;
+var js_gvPageID = 3425802;
+var jsPageID = 3425802;
 var jsPageSetID = 0;
 var jsPageType = 0;
 var jsSiteSecurityCreateControls = 0;
@@ -33,7 +34,7 @@ var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
 <!-- end (4) JavaScript -->
 <!-- beg (5) CustomHead -->
-<!-- override ParkSite from Alerts & Conditions Page-->
+<!-- override ParkSite from Standard Template-->
 <meta charset="utf-8">
 <link href="/common/commonspot/templates/images/icons/favicon.ico" rel="shortcut icon">
 <meta http-equiv="Pragma" content="no-cache" />
@@ -69,16 +70,162 @@ border-collapse:separate;
 }
 </style>
 <script src='/common/commonspot/templates/js/federated-analytics-uav1.js?ver=true&agency=DOI&subagency=NPS&exts=rtf,odt,ods,odp&dclink=true&enhlink=true' id='_fed_an_ua_tag'></script>
-<meta property="og:title" content="Alerts &amp; Conditions - President William Jefferson Clinton Birthplace Home National Historic Site (U.S. National Park Service)" />
+<meta property="og:title" content="Basic Information - President William Jefferson Clinton Birthplace Home National Historic Site (U.S. National Park Service)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.nps.gov/wicl/planyourvisit/conditions.htm" />
+<meta property="og:url" content="https://www.nps.gov/wicl/planyourvisit/basicinfo.htm" />
 <!-- end (5) CustomHead -->
 <!-- beg (6) TertiaryResources -->
+<meta property="og:image" content="https://www.nps.gov/wicl/images/photoadjusted.jpg" /><meta property="og:image:height" content="2735" /><meta property="og:image:width" content="688" /><meta property="og:image:alt" content="photoadjusted" />
 <!-- end (6) TertiaryResources -->
 <!-- beg (7) authormode_inlinestyles -->
 <link rel="stylesheet" type="text/css" href="/commonspot/commonspot.css" id="cs_maincss">
 <!-- end (7) authormode_inlinestyles -->
-</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span>
+</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span><script type="text/javascript">
+<!--
+// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+if(bVer >= 3)
+bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+if(bVer >= 4)
+bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+if (bCanRollover)
+document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+window.status = "";
+}
+function setStatbar(statbar)
+{
+// #22793 - no-op because browsers don't honor the assignment
+//	var strStatbar=unescape(statbar);
+//	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+if( menus_included == 1 )
+document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink)
+{
+// links are in one of the following formats:
+// 		cpe_60_0,CP___PAGEID=100
+// 		CPNEWWIN:WindowName^params@CP___
+// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+// displaylink is the server relative URL or fully qualified URL
+windowname = "";
+windowparams = "";
+// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
+pos = link.indexOf("CPNEWWIN:");
+if (pos != -1)
+{
+pos1 = link.indexOf ("^");
+windowname = link.substring (pos+9, pos1);
+pos2 = link.indexOf ("@");
+windowparams = link.substring (pos1 + 1, pos2);
+link = link.substring (pos2 + 1, link.length);
+}
+if( displaylink && displaylink != "" )
+{
+if (windowname == "")
+window.location = displaylink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (displaylink, windowname, windowparams);
+}
+}
+else
+{
+targetLink = link;
+if (link.indexOf ("CP___") != -1)
+{
+httpPos = -1;
+commaPos = link.indexOf(",");
+if (commaPos != -1)
+{
+targetUrl = link.substr(commaPos + 1);
+if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+{
+httpPos = commaPos + 1;
+}
+}
+if (httpPos != -1)
+{
+targetLink = link.substr(httpPos);
+commaPos = targetLink.indexOf(",");
+if (commaPos != -1)
+targetLink = targetLink.substr(0, commaPos);
+}
+else
+targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+if (windowname == "")
+window.location = targetLink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (targetLink, windowname, windowparams);
+}
+}
+else
+{
+//commaPos = link.indexOf(",");
+//if (commaPos != -1)
+//	link = link.substr(0, commaPos);
+if (windowname == "")
+window.location = link;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (link, windowname, windowparams);
+}
+}
+}
+}
+function doWindowOpen(href,name,params)
+{
+if (params != '')
+window.open (href, name, params);
+else
+window.open (href, name);
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
+windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+{
+windowparams = substringReplace(windowparams,':left=',',left=');
+windowparams = substringReplace(windowparams,'left=','left=');
+windowparams = substringReplace(windowparams,':ww=',',width=');
+windowparams = substringReplace(windowparams,'ww=','width=');
+windowparams = substringReplace(windowparams,':hh=',',height=');
+windowparams = substringReplace(windowparams,'hh=','height=');
+windowparams = substringReplace(windowparams,':loc=',',location=');
+windowparams = substringReplace(windowparams,'loc=','location=');
+windowparams = substringReplace(windowparams,':dir=',',directories=');
+windowparams = substringReplace(windowparams,'dir=','directories=');
+windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+windowparams = substringReplace(windowparams,'tb=','toolbar=');
+windowparams = substringReplace(windowparams,':stat=',',status=');
+windowparams = substringReplace(windowparams,':mb=',',menubar=');
+windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+windowparams = substringReplace(windowparams,':rs=',',resizable=');
+}
+return windowparams;
+}
+// -->
+</script>
 <!--googleoff: index-->
 <div tabindex="-1" id="beforeSkipLinks"></div>
 <div class="skip-links">
@@ -151,7 +298,7 @@ Menu
 </div>
 <nav id="GlobalNav-container" class="row" role="navigation" aria-label="NPS Primary Navigation" aria-labelledby="GlobalNav-toggle" tabindex="-1">
 <ul id="GlobalNav" class="GlobalNav GlobalNav-lvl-1">
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104551_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=5104551|5104551=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425802_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3425802|3425802=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -169,8 +316,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/wicl/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/wicl/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
+<li class="active has-sub">
+<a href="/wicl/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
 <a href="/wicl/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
@@ -178,8 +325,8 @@ navTypeTitle = 'Explore This Park';
 <li>
 <a href="/wicl/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
-<li class="active">
-<a href="/wicl/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
+<li>
+<a href="/wicl/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 </ul>
 </li>
@@ -273,7 +420,7 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104551_828672">
+<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425802_828672">
 <div id="HERO" class="Hero -secondary">
 <div class="container-fluid">
 <div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/mwr/secondary/FAEE9BF9-1DD8-B71B-0B4133316056EF3F.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="">
@@ -297,13 +444,13 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104551_481828"> </div></div></div></div></div></div>
+</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425802_481828"> </div></div></div></div></div></div>
 <div id="Park-header">
 <div class="container no-gutter">
 <!--googleoff: index-->
 <div class="col-md-6 col-lg-6 pull-left no-gutter">
 <nav id="LocalNav-desktop-nav" role="navigation" >
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104551_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=5104551|5104551=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3425802_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3425802|3425802=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -321,8 +468,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/wicl/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/wicl/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
+<li class="active has-sub">
+<a href="/wicl/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
 <a href="/wicl/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
@@ -330,8 +477,8 @@ navTypeTitle = 'Explore This Park';
 <li>
 <a href="/wicl/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
-<li class="active">
-<a href="/wicl/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
+<li>
+<a href="/wicl/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 </ul>
 </li>
@@ -526,7 +673,7 @@ NPS.display.showAdminTools( 0 );
 </div>
 </div>
 <div class="breadcrumbSourceContainer" style="display:none;">
-<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=5104551|5104551=_CSDPFID -->
+<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=3425802|3425802=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -543,13 +690,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/wicl/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/wicl/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
-<ul>
-<li class="active">
-<a href="/wicl/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
-</li>
-</ul>
+<li class="active has-sub">
+<a href="/wicl/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 </li>
 </ul>
 </li>
@@ -560,23 +702,202 @@ navTypeTitle = 'Explore This Park';
 </div>
 <!--googleon: index-->
 <div class="ColumnMain col-sm-12">
-<h1 class="page-title">Alerts &amp; Conditions</h1>
+<div class="ContentHeader">
+<h1 class="page-title">Basic Information</h1>
+</div>
 <div class="row">
 <div class="col-sm-12">
-<div id="cs_control_481718" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_alertcontainer"><div id="gridRow_1_1_481718" class="cs_GridRow"><div id="gridCol_1_1_1_1_481718" class="cs_GridColumn"><div id="cs_control_481830" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104551_481830">
-<!-- variables.isParkConditionsPage = true -->
-<!-- variables.siteCode = wicl -->
-<div id="Alerts" class="container">
-<div class="Alerts-header">
-<h2 class="Tag -black">Alerts</h2>
-<span class="hr clearfix"></span>
+<div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD">
+<div id="cs_control_5073245" class="cs_control  CS_Element_Custom">
+<div class="row">
+<div class="col-sm-12">
+<div class="panel-group text-content-size text-content-style text-content-style-secondary BasicInfo" id="BasicInfoAccordion" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseOne1">Physical Address</a></h4>
 </div>
-<div class="Alerts-container">
-No alerts at this time
+<div id="collapseOne1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="col-md-5 col-sm-12">
+<div class="physical-address-container" itemscope itemtype="http://schema.org/Place">
+<div class="physical-address">
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<span itemprop="streetAddress">
+<span>412 Division Street</span><br />
+</span>
+<span itemprop="addressLocality">Hope</span>,
+<span itemprop="addressRegion">AR</span>
+<span itemprop="postalCode">71801     </span><br />
 </div>
-<hr>
 </div>
-</div></div></div></div></div></div><div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD"><img src="/commonspot/images/clear.gif" width="1" height="1" alt="" style="display:block;" /></td></tr>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseTwo1">Directions </a></h4>
+</div>
+<div id="collapseTwo1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="text-content-size text-content-style">
+<div class="directions-container" itemscope="" itemtype="http://schema.org/Place">
+<div class="directions">
+<p><span>President William Jefferson Clinton Birthplace Home NHS is located in Hope, Arkansas. Hope is 30 miles from Texarkana (TX, AR) and 110 miles from Little Rock.
+From I-30, take exit 30 and travel south on Hwy 278 (Hervey Street) for approximately 2 miles. The park is located on the corner of 2nd Street and S Hervey Street.  Parking is available on West Division Street.</span></p>
+<div class="col-sm-12">
+<span><a href="http://www.nps.gov/wicl/planyourvisit/directions.htm" class="button button-primary -green carrot-end">Directions Details</a></span><br />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseFour1">Weather</a></h4>
+</div>
+<div id="collapseFour1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="text-content-size text-content-style text-content-style-secondary">
+<div class="row">
+<div class="col-sm-12 weather">
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<p>Temperatures in Southwest Arkansas/Northeast Texas can range from the mid-thirties in winter (Late December to mid-March/early April) and mid 75-110 degrees throughout the spring and summer (May-September/October). </p>
+</div>
+<div class="col-sm-12">
+<a href="http://forecast.weather.gov/MapClick.php?lat=33.63890335190922&lon=-93.58030011036106#.Vy4HtNhpCUl" class="button button-primary -green carrot-end">See current weather conditons and forecast.</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseFive1">Fees & Passes</a></h4>
+</div>
+<div id="collapseFive1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="fees-passes-container" itemscope="" itemtype="http://schema.org/Offer">
+<h3 class="SubSection">Entrance Fees:</h3>
+<div class="entrance-fees">
+<div id="fee-3192">
+<p class="FeeTitle"><span itemprop="name">Free</span> - <span itemprop="price">$0.00</span></p>
+<p><span itemprop="description">Free </span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseSix1">Visitor Centers</a></h4>
+</div>
+<div id="collapseSix1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="visitor-center-container">
+<div class="visitor-centers">
+<div id="visitor-center-3679">
+<span><a href="">President William Jefferson Clinton Birthplace Home National Historic Site Visitor Center</a></span><br />
+<span><p>Our visitor is a two story brick home adjacent to the home that President Bill Clinton lived in.  Address for the visitor center is 412 W. Division Street, Hope, AR 71801.  Inside is a gift shop and exhibit featuring information about President Bill Clinton's childhood.  Official Parking is along Division Street across from the visitor center.  There is accessible parking and entrance on Second Street.
+Our hours are Monday through Sunday, 9:00am to 4:30pm.  </p></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$("#BasicInfoAccordion").collapse();
+$("#BasicInfoAccordion .panel-collapse:first").collapse('show');
+</script>
+</div>
+</div>
+</div>
+</div>
+<div id="cs_spacer_3426051" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3426051" class="cs_control  CS_Element_Custom"><div class="Component text-content-size text-content-style ArticleTextGroup">
+<figure class="-auto-width">
+<img
+alt="photoadjusted"
+title="photoadjusted"
+src="/wicl/images/photoadjusted.jpg"
+>
+<figcaption>President Clinton Birthplace Home <p class="figcredit">NPS Photo </p></figcaption>
+</figure>
+</div></div>
+<div id="cs_spacer_3427380" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3427380" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
+<div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
+<p>President William Jefferson Clinton Birthplace Home National Historic Site is located in Hope, Arkansas. </p>
+<p>Hope is 30 miles east of Texarkana (on the border of Texas and Arkansas) and 110 miles west of Little Rock, Arkansas, on Interstate 30. The site includes the Birthplace Home, a visitor center located in an adjacent historic  home, and the Virginia Clinton Kelley Memorial Garden. </p>
+<p> </p>
+</div></div>
+<div id="cs_spacer_5020030" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_5020030" class="cs_control  CS_Element_Custom">
+<link href="/common/commonspot/templates/assets/libs/jquery.magnific-popup/magnific-popup.css" rel="stylesheet">  <!-- new with redesign -->
+<!-- new with redesign -->
+<script type="text/javascript" src="/common/commonspot/customcf/photogallery/scripts/plugins.js"></script>
+<script type="text/javascript">
+// init the expandable plugin for the gallery rows
+jQuery(document).ready(function() {
+jQuery('.expandable').jTruncate(
+{ length: 80, minTrail: 0, moreText: "more", lessText: "less", ellipsisText: "...", lessAni: 500, moreAni: 500 }
+);
+// init the gallery description on a galleries display page
+jQuery('.expandableDescription').jTruncate(
+{ length: 300, minTrail: 0, moreText: "more", lessText: "less", ellipsisText: "..." }
+);
+jQuery(".expandableTags").expandable(
+{ title:"Â» Tags", tooltip: "Click to expand and view tags" }
+);
+});
+</script>
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="photo-gallery">
+<ul class="gallery-content row">
+<li class="col-md-4 col-sm-4 col-xs-12 galleryItem">
+<div class="image">
+<a href="/media/photo/gallery.htm?id=62283C89-1DD8-B71B-0BC68825A0F2AFD5"><img
+src="/common/uploads/photogallery/mwr/park/wicl/6445FB9D-1DD8-B71B-0B9A18CB826EE309/6445FB9D-1DD8-B71B-0B9A18CB826EE309-small.jpg"
+alt="President Clinton speaking at the opening of President William Jefferson Clinton Birthplace Home National Historic Site. "
+height="105"
+width="158" /></a>
+</div>
+<div class="galleryChooserText">
+<a href="/media/photo/gallery.htm?id=62283C89-1DD8-B71B-0BC68825A0F2AFD5" class="galleryListTitle">Centennial Photos</a>
+<div class="photoData">
+<div class="numberOfPhotos">
+<strong>3</strong> Photos
+</div>
+<div class="photoGalleryDescription expandableDescription"><p>Photographs to be used for the Centennial Subject Site</p>
+</div>
+</div>
+</div>
+</li>
+</ul> <!-- class="gallery-content row" -->
+</div> <!-- class="photo-gallery" -->
+</div> <!-- col-md-12 col-sm-12 col-xs-12 -->
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div id="paginationWrapper">
+</div> <!-- paginationWrapper -->
+</div> <!--col-md-12 col-sm-12 col-xs-12 -->
+</div> <!-- row -->
+</div>
+</td></tr>
 </table></div>
 </div><!-- col-sm-12 -->
 </div><!-- row -->
@@ -588,7 +909,7 @@ No alerts at this time
 <div class="ColumnMain col-sm-12">
 <div class="row">
 <div class="col-sm-12 text-content-size text-content-style">
-<p style="text-align:right;">Last updated: March 23, 2016</p>
+<p style="text-align:right;">Last updated: May 7, 2016</p>
 </div>
 </div>
 </div>
@@ -828,14 +1149,22 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 </html>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/ns-resize.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-ns.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
-<script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>
+<script type="text/javascript" src="/ADF/extensions/lightbox/1.0/js/framework.js"></script><script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>
 <!-- end (2) SecondaryResources -->
 <!-- beg (3) CustomFoot -->
 <!-- end (3) CustomFoot -->
 <!-- beg (4) TertiaryResources -->
+<script>
+jQuery(function()
+{
+initADFLB();
+if ( (typeof commonspot != 'undefined') && (typeof commonspot.lightbox != 'undefined') )
+commonspot.lightbox.initCurrent(500, 500, { title: '', subtitle: '', close: 'true', reload: 'true' });
+});
+</script>
 <!-- end (4) TertiaryResources -->
 <script type="text/javascript">
 <!--
@@ -851,10 +1180,10 @@ if(!commonspot)
 commonspot.csPage = {};
 
 
-	commonspot.csPage.url = '/wicl/planyourvisit/conditions.htm';
+	commonspot.csPage.url = '/wicl/planyourvisit/basicinfo.htm';
 
 
-commonspot.csPage.id = 5104551;
+commonspot.csPage.id = 3425802;
 
 commonspot.csPage.siteRoot = '/';
 commonspot.csPage.subsiteRoot = '/wicl/planyourvisit/';

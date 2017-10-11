@@ -1,13 +1,14 @@
 <!doctype html> <html lang="en" class="no-js"> <!-- Content Copyright National Park Service -->
-<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Alerts &amp; Conditions - Little Rock Central High School National Historic Site (U.S. National Park Service)</title> <script>
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - Little Rock Central High School National Historic Site (U.S. National Park Service)</title> <script>
 var jsDlgLoader = '/chsc/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/ADF/thirdParty/jquery/jquery-1.12.js"></script><script type="text/javascript" src="/commonspot/javascript/browser-all.js"></script>
+<script type="text/javascript" src="/ADF/thirdParty/jquery/jquery-1.12.js"></script><link rel="stylesheet" type="text/css" href="/commonspot/javascript/lightbox/lightbox.css"><link rel="stylesheet" type="text/css" href="/commonspot/dashboard/css/buttons.css"><script type="text/javascript" src="/commonspot/javascript/browser-all.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
+<link rel="stylesheet" type="text/css" href="/ADF/extensions/lightbox/1.0/css/lightbox_overrides.css">
 <!-- end (2) SecondaryResources -->
 <!-- beg (3) StyleTags -->
 <link rel="stylesheet" href="/common/commonspot/templates/assets/css/commonspotRTE.css" type="text/css" />
@@ -19,8 +20,8 @@ var gMenuControlID = 0;
 var menus_included = 0;
 var jsSiteID = 1;
 var jsSubSiteID = 22073;
-var js_gvPageID = 5104193;
-var jsPageID = 5104193;
+var js_gvPageID = 3411773;
+var jsPageID = 3411773;
 var jsPageSetID = 0;
 var jsPageType = 0;
 var jsSiteSecurityCreateControls = 0;
@@ -33,9 +34,10 @@ var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
 <!-- end (4) JavaScript -->
 <!-- beg (5) CustomHead -->
-<!-- override ParkSite from Alerts & Conditions Page-->
+<!-- override ParkSite from Standard Template-->
 <meta charset="utf-8">
 <link href="/common/commonspot/templates/images/icons/favicon.ico" rel="shortcut icon">
+<meta name="description" content="civil rights, human rights, little rock, little rock nine, central high school" />
 <meta http-equiv="Pragma" content="no-cache" />
 <meta http-equiv="Expires" content="0" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,16 +71,162 @@ border-collapse:separate;
 }
 </style>
 <script src='/common/commonspot/templates/js/federated-analytics-uav1.js?ver=true&agency=DOI&subagency=NPS&exts=rtf,odt,ods,odp&dclink=true&enhlink=true' id='_fed_an_ua_tag'></script>
-<meta property="og:title" content="Alerts &amp; Conditions - Little Rock Central High School National Historic Site (U.S. National Park Service)" />
+<meta property="og:title" content="Basic Information - Little Rock Central High School National Historic Site (U.S. National Park Service)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.nps.gov/chsc/planyourvisit/conditions.htm" />
+<meta property="og:url" content="https://www.nps.gov/chsc/planyourvisit/basicinfo.htm" />
+<meta property="og:description" content="civil rights, human rights, little rock, little rock nine, central high school" />
 <!-- end (5) CustomHead -->
 <!-- beg (6) TertiaryResources -->
 <!-- end (6) TertiaryResources -->
 <!-- beg (7) authormode_inlinestyles -->
 <link rel="stylesheet" type="text/css" href="/commonspot/commonspot.css" id="cs_maincss">
 <!-- end (7) authormode_inlinestyles -->
-</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span>
+</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span><script type="text/javascript">
+<!--
+// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+if(bVer >= 3)
+bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+if(bVer >= 4)
+bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+if (bCanRollover)
+document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+window.status = "";
+}
+function setStatbar(statbar)
+{
+// #22793 - no-op because browsers don't honor the assignment
+//	var strStatbar=unescape(statbar);
+//	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+if( menus_included == 1 )
+document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink)
+{
+// links are in one of the following formats:
+// 		cpe_60_0,CP___PAGEID=100
+// 		CPNEWWIN:WindowName^params@CP___
+// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+// displaylink is the server relative URL or fully qualified URL
+windowname = "";
+windowparams = "";
+// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
+pos = link.indexOf("CPNEWWIN:");
+if (pos != -1)
+{
+pos1 = link.indexOf ("^");
+windowname = link.substring (pos+9, pos1);
+pos2 = link.indexOf ("@");
+windowparams = link.substring (pos1 + 1, pos2);
+link = link.substring (pos2 + 1, link.length);
+}
+if( displaylink && displaylink != "" )
+{
+if (windowname == "")
+window.location = displaylink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (displaylink, windowname, windowparams);
+}
+}
+else
+{
+targetLink = link;
+if (link.indexOf ("CP___") != -1)
+{
+httpPos = -1;
+commaPos = link.indexOf(",");
+if (commaPos != -1)
+{
+targetUrl = link.substr(commaPos + 1);
+if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+{
+httpPos = commaPos + 1;
+}
+}
+if (httpPos != -1)
+{
+targetLink = link.substr(httpPos);
+commaPos = targetLink.indexOf(",");
+if (commaPos != -1)
+targetLink = targetLink.substr(0, commaPos);
+}
+else
+targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+if (windowname == "")
+window.location = targetLink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (targetLink, windowname, windowparams);
+}
+}
+else
+{
+//commaPos = link.indexOf(",");
+//if (commaPos != -1)
+//	link = link.substr(0, commaPos);
+if (windowname == "")
+window.location = link;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (link, windowname, windowparams);
+}
+}
+}
+}
+function doWindowOpen(href,name,params)
+{
+if (params != '')
+window.open (href, name, params);
+else
+window.open (href, name);
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
+windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+{
+windowparams = substringReplace(windowparams,':left=',',left=');
+windowparams = substringReplace(windowparams,'left=','left=');
+windowparams = substringReplace(windowparams,':ww=',',width=');
+windowparams = substringReplace(windowparams,'ww=','width=');
+windowparams = substringReplace(windowparams,':hh=',',height=');
+windowparams = substringReplace(windowparams,'hh=','height=');
+windowparams = substringReplace(windowparams,':loc=',',location=');
+windowparams = substringReplace(windowparams,'loc=','location=');
+windowparams = substringReplace(windowparams,':dir=',',directories=');
+windowparams = substringReplace(windowparams,'dir=','directories=');
+windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+windowparams = substringReplace(windowparams,'tb=','toolbar=');
+windowparams = substringReplace(windowparams,':stat=',',status=');
+windowparams = substringReplace(windowparams,':mb=',',menubar=');
+windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+windowparams = substringReplace(windowparams,':rs=',',resizable=');
+}
+return windowparams;
+}
+// -->
+</script>
 <!--googleoff: index-->
 <div tabindex="-1" id="beforeSkipLinks"></div>
 <div class="skip-links">
@@ -151,7 +299,7 @@ Menu
 </div>
 <nav id="GlobalNav-container" class="row" role="navigation" aria-label="NPS Primary Navigation" aria-labelledby="GlobalNav-toggle" tabindex="-1">
 <ul id="GlobalNav" class="GlobalNav GlobalNav-lvl-1">
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104193_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=5104193|5104193=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3411773_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3411773|3411773=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -169,8 +317,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/chsc/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/chsc/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
+<li class="active has-sub">
+<a href="/chsc/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
 <a href="/chsc/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
@@ -178,8 +326,8 @@ navTypeTitle = 'Explore This Park';
 <li>
 <a href="/chsc/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
-<li class="active">
-<a href="/chsc/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
+<li>
+<a href="/chsc/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 </ul>
 </li>
@@ -388,7 +536,7 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104193_828672">
+<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3411773_828672">
 <div id="HERO" class="Hero -secondary">
 <div class="container-fluid">
 <div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/mwr/secondary/5CEF9A88-1DD8-B71B-0BDF08E4B475DABB.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="Central Fascade">
@@ -412,13 +560,13 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104193_481828"> </div></div></div></div></div></div>
+</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3411773_481828"> </div></div></div></div></div></div>
 <div id="Park-header">
 <div class="container no-gutter">
 <!--googleoff: index-->
 <div class="col-md-6 col-lg-6 pull-left no-gutter">
 <nav id="LocalNav-desktop-nav" role="navigation" >
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104193_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=5104193|5104193=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_3411773_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=3411773|3411773=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -436,8 +584,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/chsc/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/chsc/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
+<li class="active has-sub">
+<a href="/chsc/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
 <a href="/chsc/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
@@ -445,8 +593,8 @@ navTypeTitle = 'Explore This Park';
 <li>
 <a href="/chsc/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
-<li class="active">
-<a href="/chsc/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
+<li>
+<a href="/chsc/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 </ul>
 </li>
@@ -762,7 +910,7 @@ NPS.display.showAdminTools( 0 );
 </div>
 </div>
 <div class="breadcrumbSourceContainer" style="display:none;">
-<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=5104193|5104193=_CSDPFID -->
+<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=3411773|3411773=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -779,13 +927,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/chsc/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/chsc/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
-<ul>
-<li class="active">
-<a href="/chsc/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
-</li>
-</ul>
+<li class="active has-sub">
+<a href="/chsc/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 </li>
 </ul>
 </li>
@@ -796,22 +939,110 @@ navTypeTitle = 'Explore This Park';
 </div>
 <!--googleon: index-->
 <div class="ColumnMain col-sm-12">
-<h1 class="page-title">Alerts &amp; Conditions</h1>
+<div class="ContentHeader">
+<h1 class="page-title">Basic Information</h1>
+</div>
 <div class="row">
 <div class="col-sm-12">
-<div id="cs_control_481718" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_alertcontainer"><div id="gridRow_1_1_481718" class="cs_GridRow"><div id="gridCol_1_1_1_1_481718" class="cs_GridColumn"><div id="cs_control_481830" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104193_481830">
-<!-- variables.isParkConditionsPage = true -->
-<!-- variables.siteCode = chsc -->
-<div id="Alerts" class="container">
-<div class="Alerts-header">
-<h2 class="Tag -black">Alerts</h2>
-<span class="hr clearfix"></span>
+<div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD">
+<div id="cs_control_3421492" class="cs_control  CS_Element_Custom">
+<div id="centennialContainer">
+<div class="-no-delay fader" data-fader="">
+<ul>
+<li>
+<a href="/chsc/planyourvisit/index.htm">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source class="img-responsive" media="(min-width: 768px)" srcset="/common/uploads/mwr/park/chsc/F8134735-F2F7-FAED-91706A20775DA6F2/F8134735-F2F7-FAED-91706A20775DA6F2.jpg?width=960&height=480">
+<!--[if IE 9]></video><![endif]-->
+<img class="img-responsive" alt="Little Rock Central High School National Historic Site" srcset="/common/uploads/mwr/park/chsc/F8134735-F2F7-FAED-91706A20775DA6F2/F8134735-F2F7-FAED-91706A20775DA6F2.jpg?width=960&height=480">
+</picture>
+<div class="title">
+<div class="sub">
+<h2>Plan Your Visit</h2>
 </div>
-<div class="Alerts-container">
 </div>
-<hr>
+</a>
+</li>
+<li>
+<a href="/chsc/planyourvisit/hours.htm">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source class="img-responsive" media="(min-width: 768px)" srcset="/common/uploads/mwr/park/chsc/F8728412-F307-BBDF-CA05C26DC3F975DC/F8728412-F307-BBDF-CA05C26DC3F975DC.jpg?width=960&height=480">
+<!--[if IE 9]></video><![endif]-->
+<img class="img-responsive" alt="Visitor Center" srcset="/common/uploads/mwr/park/chsc/F8728412-F307-BBDF-CA05C26DC3F975DC/F8728412-F307-BBDF-CA05C26DC3F975DC.jpg?width=960&height=480">
+</picture>
+<div class="title">
+<div class="sub">
+<h2>Operating Hours & Seasons</h2>
 </div>
-</div></div></div></div></div></div><div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD"><img src="/commonspot/images/clear.gif" width="1" height="1" alt="" style="display:block;" /></td></tr>
+</div>
+</a>
+</li>
+<li>
+<a href="/chsc/planyourvisit/guidedtours.htm">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source class="img-responsive" media="(min-width: 768px)" srcset="/common/uploads/mwr/park/chsc/DC7BF71B-D0C8-386E-F31407CF9EDDA34D/DC7BF71B-D0C8-386E-F31407CF9EDDA34D.jpg?width=960&height=480">
+<!--[if IE 9]></video><![endif]-->
+<img class="img-responsive" alt="Park Ranger addresses group in Central High's auditorium" srcset="/common/uploads/mwr/park/chsc/DC7BF71B-D0C8-386E-F31407CF9EDDA34D/DC7BF71B-D0C8-386E-F31407CF9EDDA34D.jpg?width=960&height=480">
+</picture>
+<div class="title">
+<div class="sub">
+<h2>Guided Tours</h2>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/chsc/historyculture/index.htm">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source class="img-responsive" media="(min-width: 768px)" srcset="/common/uploads/mwr/park/chsc/F82AB3F2-ED2A-0536-28A0031E15962ED6/F82AB3F2-ED2A-0536-28A0031E15962ED6.jpg?width=960&height=480">
+<!--[if IE 9]></video><![endif]-->
+<img class="img-responsive" alt="Little Rock Nine Arrive at School" srcset="/common/uploads/mwr/park/chsc/F82AB3F2-ED2A-0536-28A0031E15962ED6/F82AB3F2-ED2A-0536-28A0031E15962ED6.jpg?width=960&height=480">
+</picture>
+<div class="title">
+<div class="sub">
+<h2>History & Culture</h2>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="/chsc/forteachers/planafieldtrip.htm">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source class="img-responsive" media="(min-width: 768px)" srcset="/common/uploads/mwr/park/chsc/D8A999C9-EC3F-EDBB-4CFE1A72F2CFB12D/D8A999C9-EC3F-EDBB-4CFE1A72F2CFB12D.jpg?width=960&height=480">
+<!--[if IE 9]></video><![endif]-->
+<img class="img-responsive" alt="Elementary School Group in front of Central High School" srcset="/common/uploads/mwr/park/chsc/D8A999C9-EC3F-EDBB-4CFE1A72F2CFB12D/D8A999C9-EC3F-EDBB-4CFE1A72F2CFB12D.jpg?width=960&height=480">
+</picture>
+<div class="title">
+<div class="sub">
+<h2>Plan a Field Trip</h2>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="cs_spacer_3421502" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_3421502" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
+<div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
+<p> <span class="subheading">Welcome to Little Rock Central High School National Historic Site</span></p>
+<p><span>We preserve the legacy of the 1957 desegregation crisis and its role in the Civil Rights Movement. Please take time to explore the pages listed below to find information for planning a visit.</span></p>
+<p><span><a id="CP___PAGEID=3018383,hours.htm,22073|" href="/chsc/planyourvisit/hours.htm">Operating Hours &amp; Seasons</a><br>
+<a id="CP___PAGEID=3018561,fees.htm,22073|" href="/chsc/planyourvisit/fees.htm">Fees &amp; Passes</a><br>
+<a id="CP___PAGEID=3018190,directions.htm,22073|" href="/chsc/planyourvisit/directions.htm">Directions &amp; Transportation</a><br>
+<a id="CP___PAGEID=3079895,guidedtours.htm,22073|" href="/chsc/planyourvisit/guidedtours.htm">Guided Tours</a><br>
+<a id="CP___PAGEID=3017872,calendar.htm,22073|" href="/chsc/planyourvisit/calendar.htm">Calendar</a><br>
+<a id="CP___PAGEID=3411780,safety.htm,22073|" href="/chsc/planyourvisit/safety.htm">Safety</a><br>
+<a id="CP___PAGEID=3025812,nearbyattractions.htm,22073|" href="/chsc/planyourvisit/nearbyattractions.htm">Nearby Attractions</a><br>
+<a id="CP___PAGEID=3018510,brochures.htm,22073|" href="/chsc/planyourvisit/brochures.htm">Brochures</a></span></p>
+</div></div>
+</td></tr>
 </table></div>
 </div><!-- col-sm-12 -->
 </div><!-- row -->
@@ -823,7 +1054,7 @@ navTypeTitle = 'Explore This Park';
 <div class="ColumnMain col-sm-12">
 <div class="row">
 <div class="col-sm-12 text-content-size text-content-style">
-<p style="text-align:right;">Last updated: March 23, 2016</p>
+<p style="text-align:right;">Last updated: April 10, 2015</p>
 </div>
 </div>
 </div>
@@ -1076,14 +1307,22 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 </html>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/ns-resize.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-ns.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
-<script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>
+<script type="text/javascript" src="/ADF/extensions/lightbox/1.0/js/framework.js"></script><script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script><script type="text/javascript" src="/templates/js/slick/slick.js"></script>
 <!-- end (2) SecondaryResources -->
 <!-- beg (3) CustomFoot -->
 <!-- end (3) CustomFoot -->
 <!-- beg (4) TertiaryResources -->
+<script>
+jQuery(function()
+{
+initADFLB();
+if ( (typeof commonspot != 'undefined') && (typeof commonspot.lightbox != 'undefined') )
+commonspot.lightbox.initCurrent(500, 500, { title: '', subtitle: '', close: 'true', reload: 'true' });
+});
+</script>
 <!-- end (4) TertiaryResources -->
 <script type="text/javascript">
 <!--
@@ -1099,10 +1338,10 @@ if(!commonspot)
 commonspot.csPage = {};
 
 
-	commonspot.csPage.url = '/chsc/planyourvisit/conditions.htm';
+	commonspot.csPage.url = '/chsc/planyourvisit/basicinfo.htm';
 
 
-commonspot.csPage.id = 5104193;
+commonspot.csPage.id = 3411773;
 
 commonspot.csPage.siteRoot = '/';
 commonspot.csPage.subsiteRoot = '/chsc/planyourvisit/';

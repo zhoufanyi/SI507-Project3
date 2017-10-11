@@ -1,5 +1,5 @@
 <!doctype html> <html lang="en" class="no-js"> <!-- Content Copyright National Park Service -->
-<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Alerts &amp; Conditions - Pony Express National Historic Trail (U.S. National Park Service)</title> <script>
+<!-- JavaScript & DHTML Code Copyright &copy; 1998-2017, PaperThin, Inc. All Rights Reserved. --> <head> <meta content="IE=edge" http-equiv="X-UA-Compatible"> <title>Basic Information - Pony Express National Historic Trail (U.S. National Park Service)</title> <script>
 var jsDlgLoader = '/poex/planyourvisit/loader.cfm';
 var jsSiteResourceLoader = '/cs-resources.cfm?r=';
 var jsSiteResourceSettings = {canCombine: false, canMinify: false};
@@ -19,8 +19,8 @@ var gMenuControlID = 0;
 var menus_included = 0;
 var jsSiteID = 1;
 var jsSubSiteID = 10717;
-var js_gvPageID = 5104455;
-var jsPageID = 5104455;
+var js_gvPageID = 2644597;
+var jsPageID = 2644597;
 var jsPageSetID = 0;
 var jsPageType = 0;
 var jsSiteSecurityCreateControls = 0;
@@ -33,7 +33,7 @@ var jsSiteResourceSettings = {canCombine: false, canMinify: false};
 </script>
 <!-- end (4) JavaScript -->
 <!-- beg (5) CustomHead -->
-<!-- override ParkSite from Alerts & Conditions Page-->
+<!-- override ParkSite from Standard Template-->
 <meta charset="utf-8">
 <link href="/common/commonspot/templates/images/icons/favicon.ico" rel="shortcut icon">
 <meta http-equiv="Pragma" content="no-cache" />
@@ -69,16 +69,162 @@ border-collapse:separate;
 }
 </style>
 <script src='/common/commonspot/templates/js/federated-analytics-uav1.js?ver=true&agency=DOI&subagency=NPS&exts=rtf,odt,ods,odp&dclink=true&enhlink=true' id='_fed_an_ua_tag'></script>
-<meta property="og:title" content="Alerts &amp; Conditions - Pony Express National Historic Trail (U.S. National Park Service)" />
+<meta property="og:title" content="Basic Information - Pony Express National Historic Trail (U.S. National Park Service)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.nps.gov/poex/planyourvisit/conditions.htm" />
+<meta property="og:url" content="https://www.nps.gov/poex/planyourvisit/basicinfo.htm" />
 <!-- end (5) CustomHead -->
 <!-- beg (6) TertiaryResources -->
+<meta property="og:image" content="https://www.nps.gov/poex/planyourvisit/images/IMG_3949a_150th-anniv-reride-at-Pony-Express-Natl-Mon_SLC-UT688px.jpg" /><meta property="og:image:height" content="405" /><meta property="og:image:width" content="688" /><meta property="og:image:alt" content="Many people gather around a grey wooden cabin surrounded by green shrubs and trees with mountains in the background." />
 <!-- end (6) TertiaryResources -->
 <!-- beg (7) authormode_inlinestyles -->
 <link rel="stylesheet" type="text/css" href="/commonspot/commonspot.css" id="cs_maincss">
 <!-- end (7) authormode_inlinestyles -->
-</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span>
+</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span><script type="text/javascript">
+<!--
+// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+var bCanRollover=0
+if (bName == "Netscape")
+{
+if(bVer >= 3)
+bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+if(bVer >= 4)
+bCanRollover=1;
+}
+function ImageSet(imgID,newTarget)
+{
+if (bCanRollover)
+document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+window.status = "";
+}
+function setStatbar(statbar)
+{
+// #22793 - no-op because browsers don't honor the assignment
+//	var strStatbar=unescape(statbar);
+//	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+if( menus_included == 1 )
+document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink)
+{
+// links are in one of the following formats:
+// 		cpe_60_0,CP___PAGEID=100
+// 		CPNEWWIN:WindowName^params@CP___
+// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+// displaylink is the server relative URL or fully qualified URL
+windowname = "";
+windowparams = "";
+// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
+pos = link.indexOf("CPNEWWIN:");
+if (pos != -1)
+{
+pos1 = link.indexOf ("^");
+windowname = link.substring (pos+9, pos1);
+pos2 = link.indexOf ("@");
+windowparams = link.substring (pos1 + 1, pos2);
+link = link.substring (pos2 + 1, link.length);
+}
+if( displaylink && displaylink != "" )
+{
+if (windowname == "")
+window.location = displaylink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (displaylink, windowname, windowparams);
+}
+}
+else
+{
+targetLink = link;
+if (link.indexOf ("CP___") != -1)
+{
+httpPos = -1;
+commaPos = link.indexOf(",");
+if (commaPos != -1)
+{
+targetUrl = link.substr(commaPos + 1);
+if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+{
+httpPos = commaPos + 1;
+}
+}
+if (httpPos != -1)
+{
+targetLink = link.substr(httpPos);
+commaPos = targetLink.indexOf(",");
+if (commaPos != -1)
+targetLink = targetLink.substr(0, commaPos);
+}
+else
+targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+if (windowname == "")
+window.location = targetLink;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (targetLink, windowname, windowparams);
+}
+}
+else
+{
+//commaPos = link.indexOf(",");
+//if (commaPos != -1)
+//	link = link.substr(0, commaPos);
+if (windowname == "")
+window.location = link;
+else
+{
+windowparams = FormatWindowParams(windowparams);
+window.open (link, windowname, windowparams);
+}
+}
+}
+}
+function doWindowOpen(href,name,params)
+{
+if (params != '')
+window.open (href, name, params);
+else
+window.open (href, name);
+}
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
+windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+{
+windowparams = substringReplace(windowparams,':left=',',left=');
+windowparams = substringReplace(windowparams,'left=','left=');
+windowparams = substringReplace(windowparams,':ww=',',width=');
+windowparams = substringReplace(windowparams,'ww=','width=');
+windowparams = substringReplace(windowparams,':hh=',',height=');
+windowparams = substringReplace(windowparams,'hh=','height=');
+windowparams = substringReplace(windowparams,':loc=',',location=');
+windowparams = substringReplace(windowparams,'loc=','location=');
+windowparams = substringReplace(windowparams,':dir=',',directories=');
+windowparams = substringReplace(windowparams,'dir=','directories=');
+windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+windowparams = substringReplace(windowparams,'tb=','toolbar=');
+windowparams = substringReplace(windowparams,':stat=',',status=');
+windowparams = substringReplace(windowparams,':mb=',',menubar=');
+windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+windowparams = substringReplace(windowparams,':rs=',',resizable=');
+}
+return windowparams;
+}
+// -->
+</script>
 <!--googleoff: index-->
 <div tabindex="-1" id="beforeSkipLinks"></div>
 <div class="skip-links">
@@ -151,7 +297,7 @@ Menu
 </div>
 <nav id="GlobalNav-container" class="row" role="navigation" aria-label="NPS Primary Navigation" aria-labelledby="GlobalNav-toggle" tabindex="-1">
 <ul id="GlobalNav" class="GlobalNav GlobalNav-lvl-1">
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104455_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=5104455|5104455=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_2644597_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=2644597|2644597=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -169,8 +315,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/poex/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/poex/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
+<li class="active has-sub">
+<a href="/poex/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
 <a href="/poex/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
@@ -178,8 +324,8 @@ navTypeTitle = 'Explore This Park';
 <li>
 <a href="/poex/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
-<li class="active">
-<a href="/poex/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
+<li>
+<a href="/poex/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 </ul>
 </li>
@@ -374,7 +520,7 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104455_828672">
+<div id="cs_control_481716" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_BannerContainer"><div id="gridRow_1_1_481716" class="cs_GridRow"><div id="gridCol_1_1_1_1_481716" class="cs_GridColumn"><div id="cs_control_828672" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_2644597_828672">
 <div id="HERO" class="Hero -secondary">
 <div class="container-fluid">
 <div class="row picturefill-background" style="background-image: url('/common/uploads/banner_image/imr/secondary/29F8FAE5-1DD8-B71B-0B6BD847830B5714.jpg?width=2400&height=400&mode=crop&quality=90'); background-position: 50% 0%;" role="img" aria-label="A rider on a horse in front of a sagebrush valley in Utah.">
@@ -398,13 +544,13 @@ navTypeTitle = 'Explore This Park';
 </div>
 </div>
 </div>
-</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104455_481828"> </div></div></div></div></div></div>
+</div></div><div id="cs_control_481828" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_2644597_481828"> </div></div></div></div></div></div>
 <div id="Park-header">
 <div class="container no-gutter">
 <!--googleoff: index-->
 <div class="col-md-6 col-lg-6 pull-left no-gutter">
 <nav id="LocalNav-desktop-nav" role="navigation" >
-<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104455_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=5104455|5104455=_CSDPFID -->
+<div id="cs_control_699042" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_2644597_699042"><div id="cs_control_481717" class="cs_control  CS_Element_Custom"><!-- _CSDPFID=2644597|2644597=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -422,8 +568,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/poex/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/poex/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
+<li class="active has-sub">
+<a href="/poex/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 <ul>
 <li>
 <a href="/poex/planyourvisit/hours.htm"> Operating Hours & Seasons </a>
@@ -431,8 +577,8 @@ navTypeTitle = 'Explore This Park';
 <li>
 <a href="/poex/planyourvisit/fees.htm"> Fees & Passes </a>
 </li>
-<li class="active">
-<a href="/poex/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
+<li>
+<a href="/poex/planyourvisit/conditions.htm"> Current Conditions </a>
 </li>
 </ul>
 </li>
@@ -728,7 +874,7 @@ NPS.display.showAdminTools( 0 );
 </div>
 </div>
 <div class="breadcrumbSourceContainer" style="display:none;">
-<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=5104455|5104455=_CSDPFID -->
+<div id="cs_control_5255284" class="cs_control  CS_Element_Custom"> <!-- _CSDPFID=2644597|2644597=_CSDPFID -->
 <style type="text/css">
 div.ColumnMain #npsNav h2 { display:none }â€‹
 </style>
@@ -745,13 +891,8 @@ navTypeTitle = 'Explore This Park';
 <li class="has-sub">
 <a href="/poex/planyourvisit/index.htm" class="has-sub"><span> Plan Your Visit </span></a>
 <ul>
-<li class="has-sub">
-<a href="/poex/planyourvisit/basicinfo.htm" class="has-sub"><span> Basic Information </span></a>
-<ul>
-<li class="active">
-<a href="/poex/planyourvisit/conditions.htm" class="active"> Current Conditions </a>
-</li>
-</ul>
+<li class="active has-sub">
+<a href="/poex/planyourvisit/basicinfo.htm" class="active has-sub"><span> Basic Information </span></a>
 </li>
 </ul>
 </li>
@@ -762,23 +903,196 @@ navTypeTitle = 'Explore This Park';
 </div>
 <!--googleon: index-->
 <div class="ColumnMain col-sm-12">
-<h1 class="page-title">Alerts &amp; Conditions</h1>
+<div class="ContentHeader">
+<h1 class="page-title">Basic Information</h1>
+</div>
 <div class="row">
 <div class="col-sm-12">
-<div id="cs_control_481718" class="cs_control CS_Element_Schedule" style="width:100%;"><div  title="" id="CS_Element_alertcontainer"><div id="gridRow_1_1_481718" class="cs_GridRow"><div id="gridCol_1_1_1_1_481718" class="cs_GridColumn"><div id="cs_control_481830" class="cs_control  CS_Element_CustomCF"><div id="CS_CCF_5104455_481830">
-<!-- variables.isParkConditionsPage = true -->
-<!-- variables.siteCode = poex -->
-<div id="Alerts" class="container">
-<div class="Alerts-header">
-<h2 class="Tag -black">Alerts</h2>
-<span class="hr clearfix"></span>
+<div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD">
+<div id="cs_control_5061531" class="cs_control  CS_Element_Custom">
+<div class="row">
+<div class="col-sm-12">
+<div class="panel-group text-content-size text-content-style text-content-style-secondary BasicInfo" id="BasicInfoAccordion" role="tablist" aria-multiselectable="true">
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseOne1">Physical Address</a></h4>
 </div>
-<div class="Alerts-container">
-No alerts at this time
+<div id="collapseOne1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="col-md-5 col-sm-12">
+<div class="physical-address-container" itemscope itemtype="http://schema.org/Place">
+<div class="physical-address">
+<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+<span itemprop="streetAddress">
+<span>National Trails Intermountain Region</span><br /> <span>Pony Express National Historic Trail </span><br /> <span>1100 Old Santa Fe Trail</span><br />
+</span>
+<span itemprop="addressLocality">Santa Fe</span>,
+<span itemprop="addressRegion">NM</span>
+<span itemprop="postalCode">87505     </span><br />
 </div>
-<hr>
 </div>
-</div></div></div></div></div></div><div id="cs_control_2" class="cs_control  CS_Element_Layout"><table id="cs_idLayout2" cellpadding="0" cellspacing="0"  width="100%" summary=""><tr class="CS_Layout_TR"><td id="cs_idCell2x1x1" class="CS_Layout_TD"><img src="/commonspot/images/clear.gif" width="1" height="1" alt="" style="display:block;" /></td></tr>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseTwo1">Directions </a></h4>
+</div>
+<div id="collapseTwo1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="text-content-size text-content-style">
+<div class="directions-container" itemscope="" itemtype="http://schema.org/Place">
+<div class="directions">
+<p><span>Young men once rode horses to carry mail from Missouri to California along the Pony Express National Historic Trail across eight states. Please see our Directions page for more information on following the Pony Express National Historic Trail across the United States.</span></p>
+<div class="col-sm-12">
+<span><a href="http://www.nps.gov/poex/planyourvisit/directions.htm" class="button button-primary -green carrot-end">Directions Details</a></span><br />
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseThree1">Operating Hours &amp; Seasons </a></h4>
+</div>
+<div id="collapseThree1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="col-sm-12">
+<div class="operating-hours-container" itemscope="" itemtype="http://schema.org/Place">
+<div class="operating-hours" itemprop="openingHoursSpecification" itemscope="" itemtype="http://schema.org/OpeningHoursSpecification">
+<div class="col-sm-12">
+<h4 class="SubSection" itemprop="name">Pony Express National Historic Trail</h3>
+<p itemprop="description">The Pony Express National Historic Trail is not a clearly marked hiking trail. Instead it is a route that passes through communities as well as wild areas and through different states and land ownership. Each location varies as to the hours of operation and access. Please check individual locations along the trail to plan your visit.</p>
+</div>
+<div class="col-sm-12 HoursSection clearfix">
+<h4 class="HoursSection">Standard Hours</h4>
+<div class="col-md-6 col-sm-6 col-xs-12">
+<ul>
+<li itemProp="dayOfWeek">
+<strong>Sunday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+<li itemProp="dayOfWeek">
+<strong>Monday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+<li itemProp="dayOfWeek">
+<strong>Tuesday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+<li itemProp="dayOfWeek">
+<strong>Wednesday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+<li itemProp="dayOfWeek">
+<strong>Thursday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+<li itemProp="dayOfWeek">
+<strong>Friday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+<li itemProp="dayOfWeek">
+<strong>Saturday:</strong> <time itemprop="opens" content="12:00:00">12:00 AM</time> - <time itemprop="closes" content="12:00:00">12:00 AM</time>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseFour1">Weather</a></h4>
+</div>
+<div id="collapseFour1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="text-content-size text-content-style text-content-style-secondary">
+<div class="row">
+<div class="col-sm-12 weather">
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<p>Due to the length of the Pony Express National Historic Trail, be sure to consult local weather sources for the region you'll be visiting. The trail passes through seven states.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseFive1">Fees & Passes</a></h4>
+</div>
+<div id="collapseFive1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="fees-passes-container" itemscope="" itemtype="http://schema.org/Offer">
+<h3 class="SubSection">Entrance Fees:</h3>
+<div class="entrance-fees">
+<div id="fee-1669">
+<p class="FeeTitle"><span itemprop="name">Entrance fees vary site by site</span> - <span itemprop="price">$0.00</span></p>
+<p><span itemprop="description">There are no user or entry fees for the Pony Express National Historic Trail. Fees may be charged at some trail-related federal, state, or locally owned historic sites and interpretive facilities. Please visit Places To Go (http://www.nps.gov/poex/planyourvisit/placestogo.htm) for an interactive map and extensive list of places to visit by state or our Links and Resources page for useful trip planning websites. Contact information is available for each site to call and find out about fees.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading" role="tab">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#BasicInfoAccordion" href="#collapseSix1">Visitor Centers</a></h4>
+</div>
+<div id="collapseSix1" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="visitor-center-container">
+<div class="visitor-centers">
+<div id="visitor-center-1287">
+<span><a href="http://www.nps.gov/poex/planyourvisit/things2do.htm">Visitor Centers vary from state to state</a></span><br />
+<span><p>The Pony Express National Historic Trail passes through seven states. A variety of visitor facilities are available along the trail. See our Things to Do page for recommendations.</p></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+$("#BasicInfoAccordion").collapse();
+$("#BasicInfoAccordion .panel-collapse:first").collapse('show');
+</script>
+</div>
+</div>
+</div>
+</div>
+<div id="cs_spacer_2644603" class="CS_Layout_SpacingHeight" style="line-height:1;"> </div>
+<div id="cs_control_2644603" class="cs_control  CS_Element_Custom"><style>blockquote {border-left: 5px solid #fff;}</style>
+<div class="Component text-content-size text-content-style ArticleTextGroup clearfix">
+<figure class="-left">
+<img
+alt="Many people gather around a grey wooden cabin surrounded by green shrubs and trees with mountains in the background."
+title="Many people gather around a grey wooden cabin surrounded by green shrubs and trees with mountains in the background."
+src="/poex/planyourvisit/images/IMG_3949a_150th-anniv-reride-at-Pony-Express-Natl-Mon_SLC-UT688px.jpg"
+>
+<figcaption>National Pony Express Association riders greet visitors at a reconstructed Pony Express station at This is the Place Heritage Park in Salt Lake City, Utah. </figcaption>
+</figure><!-- floating-image alignment  -->
+<p class="section_title"><span class="sectiontitle"><span style="BORDER-BOTTOM: windowtext 1pt; BORDER-LEFT: windowtext 1pt; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; FONT-FAMILY: &#39;Arial&#39;, &#39;sans-serif&#39;; COLOR: #5e7630; BORDER-TOP: windowtext 1pt; BORDER-RIGHT: windowtext 1pt; PADDING-TOP: 0in">Enjoy the Pony Express National Historic Trail!</span></span></p>
+<p><span class="subheading"><span style="BORDER-BOTTOM: windowtext 1pt; BORDER-LEFT: windowtext 1pt; PADDING-BOTTOM: 0in; PADDING-LEFT: 0in; PADDING-RIGHT: 0in; FONT-FAMILY: &#39;Arial&#39;, &#39;sans-serif&#39;; COLOR: #5e7630; BORDER-TOP: windowtext 1pt; BORDER-RIGHT: windowtext 1pt; PADDING-TOP: 0in">Essential Information for Your Trip on the Trail</span></span></p>
+<p>The Pony Express has fascinated Americans since its first riders hit leather in April 1860, heading west from St. Joseph, Missouri, and east from San Francisco, California. This innovative overland mail service lasterd only 19 months, but it created an immediate sensation and won a permanent place in the history of the American West. The legend of "the Pony," as it was affectionately known, may overshadow its brief history, but the bold founders and brave riders of the Pony Express helped spread important news, shrink a continent, and bind a nation that was being torn apart by civil war.</p>
+<p>Today, the Pony Express Trail still beckons the adventurous and modern highways overlay much of the route. These corridors near the original trail route are called Auto Tour Routes. Follow these Routes to travel in the footsteps of these rugged pioneers.</p>
+<p>The Pony Express National Historic Trail (NHT) was designated by Congress in 1992 and is administered by the National Park Service as a component of the National Trails System. Despite the name, the Pony Express NHT is not a continuous traditional trail from end to end, but consists of many trail traces, structures, graves, landmarks, and markers left on the landscape to remind us that the trail still lives on.</p>
+<p>Here is some information to help you plan your visit along the Pony Express NHT.</p>
+<p><a id="CP___PAGEID=1913774,placestogo.htm,10717|" href="/poex/planyourvisit/placestogo.htm">Places To Go</a> offers site listings by state that include site name, address, phone number, access, historical significance, onsite interpretation, and website.</p>
+<p><a id="CP___PAGEID=2644645,fees.htm,10717|" href="/poex/planyourvisit/fees.htm">Fees &amp; Passes</a> offers information on what costs may be associated with your visit.</p>
+<p><strong>Protect the Your Trail Heritage</strong></p>
+<p>To foster trail preservation, do not use metal detectors, dig at sites, collect artifacts, or remove anything. Please respect these historic places.</p>
+</div></div>
+</td></tr>
 </table></div>
 </div><!-- col-sm-12 -->
 </div><!-- row -->
@@ -790,12 +1104,13 @@ No alerts at this time
 <div class="ColumnMain col-sm-12">
 <div class="row">
 <div class="col-sm-12 text-content-size text-content-style">
-<p style="text-align:right;">Last updated: March 23, 2016</p>
+<p style="text-align:right;">Last updated: February 28, 2016</p>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div id="cs_control_828654" class="cs_control  CS_Element_Custom"> </div>
 <!--googleoff: index-->
 <div id="ParkFooter" class="ParkFooter">
 <div class="container">
@@ -1034,7 +1349,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 </html>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-ns.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
 <script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>
@@ -1057,10 +1372,10 @@ if(!commonspot)
 commonspot.csPage = {};
 
 
-	commonspot.csPage.url = '/poex/planyourvisit/conditions.htm';
+	commonspot.csPage.url = '/poex/planyourvisit/basicinfo.htm';
 
 
-commonspot.csPage.id = 5104455;
+commonspot.csPage.id = 2644597;
 
 commonspot.csPage.siteRoot = '/';
 commonspot.csPage.subsiteRoot = '/poex/planyourvisit/';
