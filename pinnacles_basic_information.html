@@ -78,152 +78,7 @@ border-collapse:separate;
 <!-- beg (7) authormode_inlinestyles -->
 <link rel="stylesheet" type="text/css" href="/commonspot/commonspot.css" id="cs_maincss">
 <!-- end (7) authormode_inlinestyles -->
-</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span><script type="text/javascript">
-<!--
-// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
-bName = navigator.appName;
-bVer = parseInt(navigator.appVersion);
-var bCanRollover=0
-if (bName == "Netscape")
-{
-if(bVer >= 3)
-bCanRollover=1;
-}
-else if (bName == "Microsoft Internet Explorer")
-{
-if(bVer >= 4)
-bCanRollover=1;
-}
-function ImageSet(imgID,newTarget)
-{
-if (bCanRollover)
-document[imgID].src=newTarget;
-}
-function clearStatus()
-{
-window.status = "";
-}
-function setStatbar(statbar)
-{
-// #22793 - no-op because browsers don't honor the assignment
-//	var strStatbar=unescape(statbar);
-//	window.status=strStatbar;
-}
-function onLoadComplete()
-{
-if( menus_included == 1 )
-document.onmouseover = document_mouseover;	// defined in menu_ie.js
-}
-function HandleLink(parentID,link,displaylink)
-{
-// links are in one of the following formats:
-// 		cpe_60_0,CP___PAGEID=100
-// 		CPNEWWIN:WindowName^params@CP___
-// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
-// displaylink is the server relative URL or fully qualified URL
-windowname = "";
-windowparams = "";
-// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL;
-pos = link.indexOf("CPNEWWIN:");
-if (pos != -1)
-{
-pos1 = link.indexOf ("^");
-windowname = link.substring (pos+9, pos1);
-pos2 = link.indexOf ("@");
-windowparams = link.substring (pos1 + 1, pos2);
-link = link.substring (pos2 + 1, link.length);
-}
-if( displaylink && displaylink != "" )
-{
-if (windowname == "")
-window.location = displaylink;
-else
-{
-windowparams = FormatWindowParams(windowparams);
-window.open (displaylink, windowname, windowparams);
-}
-}
-else
-{
-targetLink = link;
-if (link.indexOf ("CP___") != -1)
-{
-httpPos = -1;
-commaPos = link.indexOf(",");
-if (commaPos != -1)
-{
-targetUrl = link.substr(commaPos + 1);
-if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
-{
-httpPos = commaPos + 1;
-}
-}
-if (httpPos != -1)
-{
-targetLink = link.substr(httpPos);
-commaPos = targetLink.indexOf(",");
-if (commaPos != -1)
-targetLink = targetLink.substr(0, commaPos);
-}
-else
-targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
-if (windowname == "")
-window.location = targetLink;
-else
-{
-windowparams = FormatWindowParams(windowparams);
-window.open (targetLink, windowname, windowparams);
-}
-}
-else
-{
-//commaPos = link.indexOf(",");
-//if (commaPos != -1)
-//	link = link.substr(0, commaPos);
-if (windowname == "")
-window.location = link;
-else
-{
-windowparams = FormatWindowParams(windowparams);
-window.open (link, windowname, windowparams);
-}
-}
-}
-}
-function doWindowOpen(href,name,params)
-{
-if (params != '')
-window.open (href, name, params);
-else
-window.open (href, name);
-}
-// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
-function FormatWindowParams(windowparams)
-{
-if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 ||
-windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
-{
-windowparams = substringReplace(windowparams,':left=',',left=');
-windowparams = substringReplace(windowparams,'left=','left=');
-windowparams = substringReplace(windowparams,':ww=',',width=');
-windowparams = substringReplace(windowparams,'ww=','width=');
-windowparams = substringReplace(windowparams,':hh=',',height=');
-windowparams = substringReplace(windowparams,'hh=','height=');
-windowparams = substringReplace(windowparams,':loc=',',location=');
-windowparams = substringReplace(windowparams,'loc=','location=');
-windowparams = substringReplace(windowparams,':dir=',',directories=');
-windowparams = substringReplace(windowparams,'dir=','directories=');
-windowparams = substringReplace(windowparams,':tb=',',toolbar=');
-windowparams = substringReplace(windowparams,'tb=','toolbar=');
-windowparams = substringReplace(windowparams,':stat=',',status=');
-windowparams = substringReplace(windowparams,':mb=',',menubar=');
-windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
-windowparams = substringReplace(windowparams,':rs=',',resizable=');
-}
-return windowparams;
-}
-// -->
-</script>
+</head><body class="ParkSite"><span role="navigation" aria-label="Top of page" id="__topdoc__"></span>
 <!--googleoff: index-->
 <div tabindex="-1" id="beforeSkipLinks"></div>
 <div class="skip-links">
@@ -1053,13 +908,13 @@ navTypeTitle = 'Explore This Park';
 <div class="col-sm-6">
 <div class="Datepicker-input input-group input-group-lg">
 <label for="form-start" class="visuallyhidden">Start Date</label>
-<input type="text" id="form-start" class="input-sm form-control" name="date_start" placeholder="Start Date" value="10/11/2017" />
+<input type="text" id="form-start" class="input-sm form-control" name="date_start" placeholder="Start Date" value="10/06/2017" />
 </div>
 </div>
 <div class="col-sm-6">
 <div class="Datepicker-input input-group input-group-lg">
 <label for="form-end" class="visuallyhidden">End Date</label>
-<input type="text" id="form-end" class="input-sm form-control" name="date_end" placeholder="End Date" value="11/10/2017" />
+<input type="text" id="form-end" class="input-sm form-control" name="date_end" placeholder="End Date" value="11/05/2017" />
 </div>
 </div>
 </div>
@@ -1081,9 +936,9 @@ Upcoming Events
 </h2>
 <div class="display-list-view" id="display-list-view">
 <div class="info-micro-filter">
-<h4 style="margin-top:2px;">Showing 7 results</h4>
+<h4 style="margin-top:2px;">Showing 6 results</h4>
 <span style="font-size:.8em;">
-<input name="recurrenceToggle" id="recurrenceToggle" type="checkbox" onClick="window.location.href='/pinn/planyourvisit/calendar.htm?date_start=10/11/2017&date_end=11/10/2017&repeat=1';" />  Show ALL instances of recurring events
+<input name="recurrenceToggle" id="recurrenceToggle" type="checkbox" onClick="window.location.href='/pinn/planyourvisit/calendar.htm?date_start=10/06/2017&date_end=11/05/2017&repeat=1';" />  Show ALL instances of recurring events
 </span>
 <div style="float:right;"><a href="/rss/eventCalendar.cfm?park=pinn" target="_blank"><img src="/common/commonspot/templates/images/icons/logo_rss_25x25.gif"  style="height:15px;margin-right:5px;" title="RSS Feed" alt="RSS Feed"/> RSS Feed</a></div>
 </div>
@@ -1104,10 +959,96 @@ Upcoming Events
 </div>
 </div>
 <div class="col-sm-12 col-md-8 col-md-pull-4">
-<span class="ListingEvent-date">Saturday, October 14, 2017</span>
+<span class="ListingEvent-date">Saturday, October 7, 2017</span>
 <p class="ListingEvent-recurrence">Every Saturday Weekly  from 10/07/2017 to 12/16/2017</p>
 <p class="ListingResults-description">Ranger's choice! Join a ranger for an interactive drop-in program about the natural or cultural resources of the park.</p>
 <a href="/pinn/planyourvisit/event-details.htm?event=475029A7-1DD8-B71B-0B0B175CDE294E3A" class="ListingResults-link carrot-end" >View Details</a>
+</div>
+</div>
+</li>
+<li class="ListingList-item ListingResults-item">
+<div class="ListingEvent-header">
+<span class="ListingResults-subtitle">Pinnacles National Park</span>
+<a href="/pinn/planyourvisit/event-details.htm?event=22DDBF60-1DD8-B71B-0BEF709B2EE91BBE" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Condor Talk</h3></a>
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-4 col-md-push-8">
+<div class="ListingMeta">
+<ul>
+<li><span class="ListingMeta-label">Time:</span> 2:00 PM to 2:30 PM</li>
+<li><span class="ListingMeta-label">Location:</span> Bear Gulch Nature Center</li>
+</ul>
+</div>
+</div>
+<div class="col-sm-12 col-md-8 col-md-pull-4">
+<span class="ListingEvent-date">Sunday, October 8, 2017</span>
+<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
+<p class="ListingResults-description">Discover the majesty of these enormous, endangered birds and learn about their incredible comeback.</p>
+<a href="/pinn/planyourvisit/event-details.htm?event=22DDBF60-1DD8-B71B-0BEF709B2EE91BBE" class="ListingResults-link carrot-end" >View Details</a>
+</div>
+</div>
+</li>
+<li class="ListingList-item ListingResults-item">
+<div class="ListingEvent-header">
+<span class="ListingResults-subtitle">Pinnacles National Park</span>
+<a href="/pinn/planyourvisit/event-details.htm?event=234DA253-1DD8-B71B-0B75BEC01C2057C8" class="ListingResults-titleLink" ><h3 class="ListingResults-title">El Regreso del Cóndor</h3></a>
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-4 col-md-push-8">
+<div class="ListingMeta">
+<ul>
+<li><span class="ListingMeta-label">Location:</span> West Visitor Contact Station</li>
+</ul>
+</div>
+</div>
+<div class="col-sm-12 col-md-8 col-md-pull-4">
+<span class="ListingEvent-date">Sunday, October 8, 2017</span>
+<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
+<p class="ListingResults-description">Ven a hoyer una platica de los cóndores que se encuentran en esta area. Aprende de este pajaro increible y por que es importante.</p>
+<a href="/pinn/planyourvisit/event-details.htm?event=234DA253-1DD8-B71B-0B75BEC01C2057C8" class="ListingResults-link carrot-end" >View Details</a>
+</div>
+</div>
+</li>
+<li class="ListingList-item ListingResults-item">
+<div class="ListingEvent-header">
+<span class="ListingResults-subtitle">Pinnacles National Park</span>
+<a href="/pinn/planyourvisit/event-details.htm?event=232103BB-1DD8-B71B-0B3FA183BD5A1C32" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Nature Hike</h3></a>
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-4 col-md-push-8">
+<div class="ListingMeta">
+<ul>
+<li><span class="ListingMeta-label">Location:</span> East side, location varies. Check park bulletin boards for more information.</li>
+</ul>
+</div>
+</div>
+<div class="col-sm-12 col-md-8 col-md-pull-4">
+<span class="ListingEvent-date">Sunday, October 8, 2017</span>
+<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
+<p class="ListingResults-description">From birds to insects to wildflowers, Pinnacles is rich with biodiversity. Learn about one aspect of that diversity on this ranger-led hike. Bring your binoculars if you have them!</p>
+<a href="/pinn/planyourvisit/event-details.htm?event=232103BB-1DD8-B71B-0B3FA183BD5A1C32" class="ListingResults-link carrot-end" >View Details</a>
+</div>
+</div>
+</li>
+<li class="ListingList-item ListingResults-item">
+<div class="ListingEvent-header">
+<span class="ListingResults-subtitle">Pinnacles National Park</span>
+<a href="/pinn/planyourvisit/event-details.htm?event=22FE0EB0-1DD8-B71B-0B33122B1DCE6013" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Prewett Point Hike</h3></a>
+</div>
+<div class="row">
+<div class="col-sm-12 col-md-4 col-md-push-8">
+<div class="ListingMeta">
+<ul>
+<li><span class="ListingMeta-label">Time:</span> 9:00 AM to 10:30 AM</li>
+<li><span class="ListingMeta-label">Location:</span> West Visitor Contact Statoin</li>
+</ul>
+</div>
+</div>
+<div class="col-sm-12 col-md-8 col-md-pull-4">
+<span class="ListingEvent-date">Sunday, October 8, 2017</span>
+<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
+<p class="ListingResults-description">Learn about the unique geology of Pinnacles on this easy one-mile hike as you explore our newest, wheelchair-accessible trail. </p>
+<a href="/pinn/planyourvisit/event-details.htm?event=22FE0EB0-1DD8-B71B-0B33122B1DCE6013" class="ListingResults-link carrot-end" >View Details</a>
 </div>
 </div>
 </li>
@@ -1132,114 +1073,6 @@ Upcoming Events
 </div>
 </div>
 </li>
-<li class="ListingList-item ListingResults-item">
-<div class="ListingEvent-header">
-<span class="ListingResults-subtitle">Pinnacles National Park</span>
-<a href="/pinn/planyourvisit/event-details.htm?event=22DDBF60-1DD8-B71B-0BEF709B2EE91BBE" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Condor Talk</h3></a>
-</div>
-<div class="row">
-<div class="col-sm-12 col-md-4 col-md-push-8">
-<div class="ListingMeta">
-<ul>
-<li><span class="ListingMeta-label">Time:</span> 2:00 PM to 2:30 PM</li>
-<li><span class="ListingMeta-label">Location:</span> Bear Gulch Nature Center</li>
-</ul>
-</div>
-</div>
-<div class="col-sm-12 col-md-8 col-md-pull-4">
-<span class="ListingEvent-date">Sunday, October 15, 2017</span>
-<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
-<p class="ListingResults-description">Discover the majesty of these enormous, endangered birds and learn about their incredible comeback.</p>
-<a href="/pinn/planyourvisit/event-details.htm?event=22DDBF60-1DD8-B71B-0BEF709B2EE91BBE" class="ListingResults-link carrot-end" >View Details</a>
-</div>
-</div>
-</li>
-<li class="ListingList-item ListingResults-item">
-<div class="ListingEvent-header">
-<span class="ListingResults-subtitle">Pinnacles National Park</span>
-<a href="/pinn/planyourvisit/event-details.htm?event=234DA253-1DD8-B71B-0B75BEC01C2057C8" class="ListingResults-titleLink" ><h3 class="ListingResults-title">El Regreso del Cóndor</h3></a>
-</div>
-<div class="row">
-<div class="col-sm-12 col-md-4 col-md-push-8">
-<div class="ListingMeta">
-<ul>
-<li><span class="ListingMeta-label">Time:</span> 2:00 PM to 2:30 PM</li>
-<li><span class="ListingMeta-label">Location:</span> West Visitor Contact Station</li>
-</ul>
-</div>
-</div>
-<div class="col-sm-12 col-md-8 col-md-pull-4">
-<span class="ListingEvent-date">Sunday, October 15, 2017</span>
-<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
-<p class="ListingResults-description">Ven a oír una platica de los cóndores que se encuentran en esta area. Aprende de este pájaro increíble y por que es importante.</p>
-<a href="/pinn/planyourvisit/event-details.htm?event=234DA253-1DD8-B71B-0B75BEC01C2057C8" class="ListingResults-link carrot-end" >View Details</a>
-</div>
-</div>
-</li>
-<li class="ListingList-item ListingResults-item">
-<div class="ListingEvent-header">
-<span class="ListingResults-subtitle">Pinnacles National Park</span>
-<a href="/pinn/planyourvisit/event-details.htm?event=232103BB-1DD8-B71B-0B3FA183BD5A1C32" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Nature Hike</h3></a>
-</div>
-<div class="row">
-<div class="col-sm-12 col-md-4 col-md-push-8">
-<div class="ListingMeta">
-<ul>
-<li><span class="ListingMeta-label">Location:</span> East side, location varies. Check park bulletin boards for more information.</li>
-</ul>
-</div>
-</div>
-<div class="col-sm-12 col-md-8 col-md-pull-4">
-<span class="ListingEvent-date">Sunday, October 15, 2017</span>
-<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
-<p class="ListingResults-description">From birds to insects to wildflowers, Pinnacles is rich with biodiversity. Learn about one aspect of that diversity on this ranger-led hike. Bring your binoculars if you have them!</p>
-<a href="/pinn/planyourvisit/event-details.htm?event=232103BB-1DD8-B71B-0B3FA183BD5A1C32" class="ListingResults-link carrot-end" >View Details</a>
-</div>
-</div>
-</li>
-<li class="ListingList-item ListingResults-item">
-<div class="ListingEvent-header">
-<span class="ListingResults-subtitle">Pinnacles National Park</span>
-<a href="/pinn/planyourvisit/event-details.htm?event=22FE0EB0-1DD8-B71B-0B33122B1DCE6013" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Prewett Point Hike</h3></a>
-</div>
-<div class="row">
-<div class="col-sm-12 col-md-4 col-md-push-8">
-<div class="ListingMeta">
-<ul>
-<li><span class="ListingMeta-label">Time:</span> 9:00 AM to 10:30 AM</li>
-<li><span class="ListingMeta-label">Location:</span> West Visitor Contact Statoin</li>
-</ul>
-</div>
-</div>
-<div class="col-sm-12 col-md-8 col-md-pull-4">
-<span class="ListingEvent-date">Sunday, October 15, 2017</span>
-<p class="ListingEvent-recurrence">Every Sunday Weekly  from 10/08/2017 to 12/17/2017</p>
-<p class="ListingResults-description">Learn about the unique geology of Pinnacles on this easy one-mile hike as you explore our newest, wheelchair-accessible trail. </p>
-<a href="/pinn/planyourvisit/event-details.htm?event=22FE0EB0-1DD8-B71B-0B33122B1DCE6013" class="ListingResults-link carrot-end" >View Details</a>
-</div>
-</div>
-</li>
-<li class="ListingList-item ListingResults-item">
-<div class="ListingEvent-header">
-<span class="ListingResults-subtitle">Pinnacles National Park</span>
-<a href="/pinn/planyourvisit/event-details.htm?event=135308C0-1DD8-B71B-0B9790B6C9496BBF" class="ListingResults-titleLink" ><h3 class="ListingResults-title">Senior Saunter</h3></a>
-</div>
-<div class="row">
-<div class="col-sm-12 col-md-4 col-md-push-8">
-<div class="ListingMeta">
-<ul>
-<li><span class="ListingMeta-label">Time:</span> 9:30 AM to 11:00 AM</li>
-<li><span class="ListingMeta-label">Location:</span> East Pinnacles Visitor Center</li>
-</ul>
-</div>
-</div>
-<div class="col-sm-12 col-md-8 col-md-pull-4">
-<span class="ListingEvent-date">Saturday, October 28, 2017</span>
-<p class="ListingResults-description">Share stories of the natural and cultural history of Pinnacles on an easy two mile stroll. </p>
-<a href="/pinn/planyourvisit/event-details.htm?event=135308C0-1DD8-B71B-0B9790B6C9496BBF" class="ListingResults-link carrot-end" >View Details</a>
-</div>
-</div>
-</li>
 </ul>
 </div>
 </div>
@@ -1252,6 +1085,7 @@ Upcoming Events
 </div><!-- ColumnMain col-sm-9 -->
 </div><!-- ColumnGrid row -->
 </div><!-- end container -->
+<div id="cs_control_828654" class="cs_control  CS_Element_Custom"> </div>
 <!--googleoff: index-->
 <div id="ParkFooter" class="ParkFooter">
 <div class="container">
@@ -1488,7 +1322,7 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 </html>
 <!-- beg (1) PrimaryResources -->
-<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script>
+<script type="text/javascript" src="/commonspot/javascript/lightbox/overrides.js"></script><script type="text/javascript" src="/commonspot/javascript/lightbox/window_ref.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-common.js"></script><script type="text/javascript" src="/commonspot/pagemode/always-include-ns.js"></script>
 <!-- end (1) PrimaryResources -->
 <!-- beg (2) SecondaryResources -->
 <script type="text/javascript" src="/ADF/thirdParty/jquery/cookie/jquery.cookie.js"></script>

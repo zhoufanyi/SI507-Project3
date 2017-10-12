@@ -157,15 +157,15 @@ class NationalSite:
         information_soup = BeautifulSoup(
             get_html(tiltle, web_address), 'html.parser')
         try:
-        	post_office_box_number = re.sub('\s',' ',information_soup.find(
+        	street_address = re.sub('\s',' ',  information_soup.find(
             'div', {'class': 'mailing-address'}).find('span',{'itemprop': 'streetAddress'}).text.strip())
         except:
-        	post_office_box_number = None
+        	street_address = None
         try:
-        	street_address = re.sub('\s',' ',information_soup.find(
+        	post_office_box_number = re.sub('\s',' ','P.O. Box ' + information_soup.find(
             'div', {'class': 'mailing-address'}).find('span',{'itemprop': 'postOfficeBoxNumber'}).text.strip())
         except:
-        	street_address = None
+        	post_office_box_number = None
         address_locality = re.sub('\s',' ',information_soup.find(
             'div', {'class': 'mailing-address'}).find('span',{'itemprop': 'addressLocality'}).text.strip())
         address_region = re.sub('\s',' ',information_soup.find(
@@ -220,8 +220,6 @@ def csv_writer(file_name,site_list):
 csv_writer('arkansas.csv',arkansas_natl_sites)
 csv_writer('california.csv',california_natl_sites)
 csv_writer('michigan.csv',michigan_natl_sites)
-
-
 
 
 
